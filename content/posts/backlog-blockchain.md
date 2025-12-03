@@ -1,7 +1,8 @@
 +++
 date = '2025-12-03T21:51:04+09:00'
 title = '블록체인과 관련된 글을 작성해보자'
-tags = ['backlog', 'blockchain']
+tags = ['backlog']
+categories = ['blockchain']
 +++
 
 이제 더 이상 블로그 글 작성하는 것을 미루지 않으려고 합니다.
