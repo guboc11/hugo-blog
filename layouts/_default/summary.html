@@ -3,9 +3,20 @@
 	<header class="list__header">
 		<h2 class="list__title post__title">
 			<a href="{{ .RelPermalink }}" rel="bookmark">
-			{{ .Title }}
+				{{ .Title }}
 			</a>
 		</h2>
+		<div class="post__date__container">
+			<span class="post__date">
+				<strong class="semibold gray">Created:</strong> {{ .Date.Format
+				"2006-01-02 15:04" }}
+				<!-- Created: <strong>{{ .Date.Format "2006-01-02 15:04" }}</strong> -->
+			</span>
+			<span class="post__update__date">
+				<strong class="semibold gray">Latest Modified:</strong> {{ .Lastmod.Format
+				"2006-01-02 15:04" }}
+			</span>
+		</div>
 		{{- with .Params.lead }}
 		<p class="list__lead post__lead">{{ . }}</p>
 		{{- end }}
@@ -19,7 +30,8 @@
 	{{- if .Site.Params.readmore }}
 	{{- if .Truncated }}
 	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="{{ .RelPermalink }}">{{ T "read_more" }}</a>
+		<a class="list__footer-readmore btn" href="{{ .RelPermalink }}">{{ T
+			"read_more" }}</a>
 	</div>
 	{{- end }}
 	{{- end }}
